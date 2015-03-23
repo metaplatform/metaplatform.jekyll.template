@@ -2,7 +2,7 @@
 layout: default
 ---
 		{% if page.heading && page.description %}
-		<header id="intro">
+		<header id="intro"{% if page.header_compact %} class="compact"{% endif %}>
 			<div class="wrap">
 				<h1 class="title">{{ page.heading }}</h1>
 				<p class="description">{{ page.description }}</p>
@@ -18,7 +18,8 @@ layout: default
 
 					<ul>
 
-					{% for item in site.pages %}
+					{% assign nav = site.pages | sort:"order"  %}
+					{% for item in nav %}
 						{% if item.title and item.class != null and item.class == page.products_class %}
 						<li>
 							<a href="{{ item.url | prepend: site.baseurl }}">

@@ -15,7 +15,8 @@
 
 				<nav>
 					<ul>
-					{% for item in site.pages | sort:"order" %}
+					{% assign nav = site.pages | sort:"order"  %}
+					{% for item in nav %}
 						{% if item.title and item.parent == null %}
 						<li{% if page.url == item.url or page.parent == item.id and item.id != null %} class="current"{% endif %}><a href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
 						{% endif %}
