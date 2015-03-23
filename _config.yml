@@ -1,0 +1,17 @@
+# Site settings
+title: MetaPlatform
+email: info@meta-platform.com
+description: "META Platform are software products and tools to build customized information system."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://metaplatform.github.io/" # the base hostname & protocol for your site
+author: "meta-platform.com"
+robots: "all, follow"
+
+# Link settings
+github_username: "metaplatform"
+github_repository: "metaplatform"
+metaplatform_url: "http://code.meta-platform.com/"
+contact_email: "info&#64;meta-platform.com"
+
+# Build settings
+markdown: redcarpet
